@@ -1,0 +1,33 @@
+# Local Python / IDE
+.venv/
+.idea/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local settings and data
+.env
+.env.*
+!.env.example
+.local/
+*.sqlite3
+*.sqlite3-*
+db.sqlite3*
+media/
+storage/
+staticfiles/
+logs/
+
+# Generated docs / packages
+site/
+build/
+dist/
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db

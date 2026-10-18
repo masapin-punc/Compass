@@ -1,0 +1,62 @@
+site_name: Compass
+site_description: 知識とプロジェクト管理を統合するCompassの設計・開発ドキュメント
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+
+theme:
+  name: material
+  language: ja
+  font: false
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+  palette:
+    primary: teal
+    accent: amber
+
+plugins:
+  - search:
+      lang:
+        - ja
+        - en
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - はじめに: index.md
+  - 作業の引継ぎ:
+      - 次のCodexへの指示書: handoff/next-agent.md
+      - 経緯と現在地: handoff/history.md
+  - 要件:
+      - 要件定義: requirements/overview.md
+      - 受入条件: requirements/acceptance.md
+  - 設計:
+      - アプリ・ディレクトリ構造: architecture/structure.md
+      - データ・正本・権限: architecture/data-and-access.md
+  - 開発:
+      - 環境と確認手順: development/setup.md
+      - 開発段階: planning/roadmap.md
+      - 未決事項: planning/open-questions.md
+  - 移行・運用:
+      - 既存資産の移行: migration/plan.md
+      - 運用手順: operations/runbook.md
+  - 意思決定:
+      - Compassの命名: decisions/0001-name.md
+      - Web構成の方針案: decisions/0002-web-architecture.md
+      - 記録テンプレート: decisions/template.md
+  - 参考:
+      - 現状調査: reference/current-state.md
+      - 参照元: reference/sources.md
